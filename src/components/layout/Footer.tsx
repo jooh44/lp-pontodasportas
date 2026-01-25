@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
                         <a href={`https://instagram.com/${footer.instagram.replace('@', '')}`} target="_blank" rel="noreferrer" aria-label="Instagram">
                             <FaInstagram />
                         </a>
-                        <a href={`https://wa.me/5519999999999`} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                        <a href={`https://wa.me/5519993337602`} target="_blank" rel="noreferrer" aria-label="WhatsApp">
                             <FaWhatsapp />
                         </a>
                     </div>
