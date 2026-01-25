@@ -12,34 +12,32 @@ export const Hero: React.FC = () => {
 
     // Lazy initialization for immediate correct image selection
     const [bgImages] = useState<string[]>(() => {
-        // Default to Desktop if SSR (not the case here, but safe)
+        // Default to Desktop if SSR
         if (typeof window === 'undefined') return [];
 
         const isMobile = window.innerWidth < 768;
 
-        // Mobile: Vertical Crop (720x1280), Lower Quality (60)
-        // Desktop: Full Width (2000), Standard Quality (80)
-        const params = isMobile
-            ? `auto=format&fit=crop&q=60&w=720&h=1280`
-            : `auto=format&fit=crop&q=80&w=2000`;
-
-        return [
-            `https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?${params}&fm=webp`, // Modern House
-            `https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?${params}&fm=webp`, // Entryway
-            `https://images.unsplash.com/photo-1600585154340-be6161a56a0c?${params}&fm=webp`, // Living Room Window
+        // Desktop Images (Unsplash High Res)
+        const desktopImages = [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000&fm=webp",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000&fm=webp",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000&fm=webp"
         ];
+
+        // Mobile Images (You can upload local files 'hero-mobile-1.webp' to public/ OR use these vertical crops)
+        // For now using Unsplash Vertical Crops as placeholders until you upload specific ones
+        const mobileImages = [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=65&w=720&h=1280&fm=webp",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=65&w=720&h=1280&fm=webp",
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=65&w=720&h=1280&fm=webp"
+        ];
+
+        return isMobile ? mobileImages : desktopImages;
     });
 
-    // Handle resize to update quality if needed (optional, but good for rotation)
+    // Handle resize (Simplified: reload on huge width changes could be added, but keeping it stable for now)
     useEffect(() => {
-        const handleResize = () => {
-            const isMobile = window.innerWidth < 768;
-            const width = isMobile ? 800 : 2000;
-            // Only update if we crossed the breakpoint
-            // Simplified for now: just sticking to initial decision is usually fine for mobile load performance
-        };
-        // window.addEventListener('resize', handleResize);
-        // return () => window.removeEventListener('resize', handleResize);
+        // Optional: Add logic here if dynamic switching on resize is strictly needed
     }, []);
 
     useGSAP(() => {
