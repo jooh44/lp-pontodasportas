@@ -17,8 +17,24 @@ const heroImages = [
 export const Hero: React.FC = () => {
     const { hero } = content;
     const containerRef = useRef<HTMLDivElement>(null);
+    const [bgImages, setBgImages] = React.useState<string[]>([]);
+
+    React.useEffect(() => {
+        const isMobile = window.innerWidth < 768;
+        const width = isMobile ? 800 : 2000;
+        const quality = isMobile ? 60 : 80;
+
+        const optimizedImages = [
+            `https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Modern House
+            `https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Entryway
+            `https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Living Room Window
+        ];
+        setBgImages(optimizedImages);
+    }, []);
 
     useGSAP(() => {
+        if (bgImages.length === 0) return;
+
         const images = gsap.utils.toArray<HTMLElement>('.hero-slider__bg');
 
         // Initial state
@@ -55,12 +71,14 @@ export const Hero: React.FC = () => {
                 });
         });
 
-    }, { scope: containerRef });
+    }, { scope: containerRef, dependencies: [bgImages] });
+
+    if (bgImages.length === 0) return null; // Or a loader
 
     return (
         <section id="hero" className="hero-slider" ref={containerRef}>
             <div className="hero-slider__bg-wrapper">
-                {heroImages.map((src, index) => (
+                {bgImages.map((src, index) => (
                     <div
                         key={index}
                         className="hero-slider__bg"
