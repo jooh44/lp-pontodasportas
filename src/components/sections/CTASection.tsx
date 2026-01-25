@@ -1,0 +1,36 @@
+
+import React from 'react';
+import { content } from '../../data/content';
+import { Button } from '../common/Button';
+import { FaWhatsapp } from 'react-icons/fa';
+import './CTASection.css';
+
+export const CTASection: React.FC = () => {
+    const { ctaSection } = content;
+
+    return (
+        <section className="cta-section">
+            <div className="cta-section__overlay"></div>
+            <div
+                className="cta-section__bg"
+                style={{ backgroundImage: `url(${ctaSection.backgroundImage})` }}
+            ></div>
+
+            <div className="container cta-section__container" data-aos="zoom-in">
+                <div className="cta-section__content">
+                    <h2 className="cta-section__title">{ctaSection.title}</h2>
+                    <p className="cta-section__subtitle">{ctaSection.subtitle}</p>
+                    <Button
+                        variant="whatsapp"
+                        size="lg"
+                        icon={<FaWhatsapp />}
+                        onClick={() => window.open('https://wa.me/5519999999999', '_blank')}
+                        className="btn--cta"
+                    >
+                        {ctaSection.buttonText}
+                    </Button>
+                </div>
+            </div>
+        </section>
+    );
+};

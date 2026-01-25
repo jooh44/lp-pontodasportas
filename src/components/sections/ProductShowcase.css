@@ -1,0 +1,111 @@
+.product-showcase {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-gray-50);
+}
+
+.product-showcase .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.product-section {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.product-section:nth-child(even) {
+    background-color: var(--color-gray-50);
+}
+
+.product-section__container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3xl);
+}
+
+.product-section--reverse .product-section__container {
+    flex-direction: row-reverse;
+}
+
+.product-section__image-wrapper {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-section__image {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    transition: transform var(--transition-normal);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.product-section:hover .product-section__image {
+    transform: scale(1.05);
+}
+
+.product-section__tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    z-index: 2;
+    box-shadow: var(--shadow-sm);
+}
+
+.product-section__content {
+    flex: 1;
+}
+
+.product-section__title {
+    font-size: 2.25rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.product-section__description {
+    font-size: 1.125rem;
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .product-section__container,
+    .product-section--reverse .product-section__container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .product-section__image-wrapper {
+        min-height: auto;
+        width: 100%;
+    }
+
+    .product-section__image {
+        max-height: 300px;
+    }
+
+    .product-section__title {
+        font-size: 1.75rem;
+    }
+
+    .product-section {
+        padding: var(--spacing-xl) 0;
+    }
+}

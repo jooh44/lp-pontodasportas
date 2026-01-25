@@ -1,0 +1,79 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    border: none;
+    font-family: var(--font-family-main);
+    font-weight: 600;
+    border-radius: var(--border-radius-full);
+    /* Modern pill shape */
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.02em;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Variants */
+.btn--primary {
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+    filter: brightness(1.1);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.btn--whatsapp {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--whatsapp:hover {
+    background-color: var(--color-secondary-hover);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.btn--outline {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn--outline:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Sizes */
+.btn--sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn--md {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.btn--lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn--full {
+    width: 100%;
+}
