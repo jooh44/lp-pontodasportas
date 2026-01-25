@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Preload LCP Image -->
-  <link rel="preload" as="image"
-    href="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000" />
+  <!-- Preload LCP Image (Desktop: w=2000) -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000&fm=webp" media="(min-width: 768px)" />
+  <!-- Preload LCP Image (Mobile: w=720&h=1280 Vertical Crop) -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=60&w=720&h=1280&fm=webp" media="(max-width: 767.98px)" />
   <title>Ponto das Portas | Esquadrias de Alto Padrão</title>
 </head>
 

@@ -11,18 +11,22 @@ export const Hero: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     // Lazy initialization for immediate correct image selection
-    const [bgImages, setBgImages] = useState<string[]>(() => {
+    const [bgImages] = useState<string[]>(() => {
         // Default to Desktop if SSR (not the case here, but safe)
         if (typeof window === 'undefined') return [];
 
         const isMobile = window.innerWidth < 768;
-        const width = isMobile ? 800 : 2000;
-        const quality = isMobile ? 60 : 80;
+
+        // Mobile: Vertical Crop (720x1280), Lower Quality (60)
+        // Desktop: Full Width (2000), Standard Quality (80)
+        const params = isMobile
+            ? `auto=format&fit=crop&q=60&w=720&h=1280`
+            : `auto=format&fit=crop&q=80&w=2000`;
 
         return [
-            `https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Modern House
-            `https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Entryway
-            `https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Living Room Window
+            `https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?${params}&fm=webp`, // Modern House
+            `https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?${params}&fm=webp`, // Entryway
+            `https://images.unsplash.com/photo-1600585154340-be6161a56a0c?${params}&fm=webp`, // Living Room Window
         ];
     });
 
