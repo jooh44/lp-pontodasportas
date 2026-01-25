@@ -1,5 +1,4 @@
-
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Button } from '../common/Button';
@@ -7,29 +6,36 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { content } from '../../data/content';
 import './HeroSlider.css';
 
-// High-quality architectural images
-const heroImages = [
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000", // Modern House
-    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000", // Entryway
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000", // Living Room Window
-];
-
 export const Hero: React.FC = () => {
     const { hero } = content;
     const containerRef = useRef<HTMLDivElement>(null);
-    const [bgImages, setBgImages] = React.useState<string[]>([]);
 
-    React.useEffect(() => {
+    // Lazy initialization for immediate correct image selection
+    const [bgImages, setBgImages] = useState<string[]>(() => {
+        // Default to Desktop if SSR (not the case here, but safe)
+        if (typeof window === 'undefined') return [];
+
         const isMobile = window.innerWidth < 768;
         const width = isMobile ? 800 : 2000;
         const quality = isMobile ? 60 : 80;
 
-        const optimizedImages = [
+        return [
             `https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Modern House
             `https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Entryway
             `https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=${quality}&w=${width}&fm=webp`, // Living Room Window
         ];
-        setBgImages(optimizedImages);
+    });
+
+    // Handle resize to update quality if needed (optional, but good for rotation)
+    useEffect(() => {
+        const handleResize = () => {
+            const isMobile = window.innerWidth < 768;
+            const width = isMobile ? 800 : 2000;
+            // Only update if we crossed the breakpoint
+            // Simplified for now: just sticking to initial decision is usually fine for mobile load performance
+        };
+        // window.addEventListener('resize', handleResize);
+        // return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     useGSAP(() => {
