@@ -91,8 +91,8 @@
 }
 
 .footer__contact-item svg {
-    color: var(--color-primary);
-    /* Accent color for icons */
+    color: var(--color-accent);
+    /* Accent color for icons (Yellow) */
     margin-top: 4px;
     /* Align with first line of text */
 }
