@@ -3,6 +3,7 @@ import { Header } from './components/layout/Header';
 import { Hero } from './components/sections/Hero';
 import { Authority } from './components/sections/Authority';
 import { ProductShowcase } from './components/sections/ProductShowcase';
+import { StatsSection } from './components/sections/StatsSection';
 import { FAQ } from './components/sections/FAQ';
 import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
 import { Footer } from './components/layout/Footer';
@@ -17,6 +18,7 @@ function App() {
         <Hero />
         <Authority />
         <ProductShowcase />
+        <StatsSection />
         <Testimonials />
         <CTASection />
         <FAQ />

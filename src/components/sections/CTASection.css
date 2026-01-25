@@ -64,19 +64,34 @@
 }
 
 .btn--cta {
-    background-color: var(--color-accent) !important;
-    color: var(--color-primary-dark) !important;
+    background-color: rgba(244, 180, 0, 0.15) !important;
+    /* Yellow Glass */
+    color: var(--color-accent) !important;
+    border: 1px solid var(--color-accent);
+    backdrop-filter: blur(4px);
     font-weight: 800;
     text-transform: uppercase;
 }
 
 .btn--cta:hover {
-    background-color: var(--color-white) !important;
-    color: var(--color-primary) !important;
+    background-color: var(--color-accent) !important;
+    /* Solid Yellow on Hover */
+    color: var(--color-primary-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(244, 180, 0, 0.4);
 }
 
 @media (max-width: 768px) {
     .cta-section__title {
         font-size: 1.75rem;
+    }
+
+    .btn--cta {
+        width: 100%;
+        padding: 1rem;
+        font-size: 0.9rem;
+        /* Smaller font to prevent awkward wrapping */
+        white-space: nowrap;
+        /* Try to keep on one line if possible, or control wrapping */
     }
 }

@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { content } from '../../data/content';
-import { FaHistory, FaTruck, FaRulerCombined, FaTools } from 'react-icons/fa';
+import { History, Truck, Ruler, Wrench } from 'lucide-react';
 import './Authority.css';
 
 const IconMap: Record<string, React.ReactNode> = {
-    FaHistory: <FaHistory />,
-    FaTruck: <FaTruck />,
-    FaRulerCombined: <FaRulerCombined />,
-    FaTools: <FaTools />
+    FaHistory: <History strokeWidth={1.5} />,
+    FaTruck: <Truck strokeWidth={1.5} />,
+    FaRulerCombined: <Ruler strokeWidth={1.5} />,
+    FaTools: <Wrench strokeWidth={1.5} />
 };
 
 export const Authority: React.FC = () => {
@@ -21,8 +21,8 @@ export const Authority: React.FC = () => {
                 <div className="authority__grid">
                     {authority.items.map((item) => (
                         <div key={item.id} className="authority__item">
-                            <div className="authority__icon">
-                                {IconMap[item.icon] || <FaTools />}
+                            <div className="authority__icon-box">
+                                {IconMap[item.icon] || <Wrench />}
                             </div>
                             <h3 className="authority__title">{item.title}</h3>
                             <p className="authority__description">{item.description}</p>

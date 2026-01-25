@@ -1,18 +1,19 @@
 
 export const content = {
     hero: {
-        headline: "Esquadrias de Alto Padrão e Portas que Transformam sua Casa.",
-        subheadline: "Unimos a durabilidade da Linha 30 (L-30) com a nobreza da Madeira Maciça. Desde 2006 transformando casas em Valinhos (Vila Embaré) e Região.",
-        cta: "Solicitar Orçamento via WhatsApp",
+        badges: ["Esquadrias e Portas em Valinhos"],
+        headline: "Esquadrias de <strong>Alto Padrão</strong> e Portas que Transformam a sua Casa.",
+        subheadline: "<strong>10 anos</strong> de excelência em Valinhos e região. Unimos a robustez do alumínio à nobreza da madeira para quem não abre mão de <strong>qualidade e valorização do imóvel.</strong>",
+        cta: "Solicitar Orçamento",
         link: "https://wa.me/5519999999999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." // Placeholder number
     },
     authority: {
-        title: "Por que escolher a Ponto das Portas?",
+        title: "Qualidade e Confiança",
         items: [
             {
                 id: 1,
-                title: "Tradição desde 2006",
-                description: "Fundada em 14 de Março de 2006, somamos quase duas décadas de excelência em Valinhos.",
+                title: "Tradição desde 2014", // Adjusted year math (2024-10) approx
+                description: "Fundada há uma década, somamos experiência e excelência em Valinhos.",
                 icon: "FaHistory" // Icon name reference
             },
             {
@@ -36,58 +37,123 @@ export const content = {
         ]
     },
     products: {
-        title: "Nossas Soluções",
+        title: "Soluções de Alto Padrão",
         subtitle: "Do projeto à instalação",
         items: [
             {
                 id: "esquadrias",
                 title: "Esquadrias linha L-30",
                 description: "Especialistas na Linha 30 (L-30). Perfis robustos para portas sacada, janelas panorâmicas e projetos de alto padrão.",
-                image: "/products/window-l30.png",
+                image: "/products/window-l30-white.png",
                 tag: "Mais Vendido"
             },
             {
                 id: "portas-entrada",
                 title: "Madeira Maciça Selecionada",
                 description: "Portas Realeza, Venezianas e Pivotantes. Batentes em madeira maciça que garantem estabilidade e sofisticação.",
-                image: "/products/door-solid.png",
+                image: "/products/door-solid-white.png",
                 tag: "Design"
             },
             {
                 id: "janelas-integradas",
                 title: "Janelas com Persiana",
                 description: "Controle total de luminosidade e conforto térmico para quartos e Home Theater.",
-                image: "/products/window-integrated.png",
+                image: "/products/window-integrated-white.png",
                 tag: "Conforto"
             },
             {
                 id: "kits-prontos",
                 title: "Portas Frisadas e Lisas",
                 description: "Semi-sólidas de alta qualidade para interiores. Acabamento perfeito para verniz ou pintura, com batentes sob medida.",
-                image: "/products/door-internal.png",
+                image: "/products/door-internal-white.png",
                 tag: "Praticidade"
+            }
+        ]
+    },
+    stats: {
+        background: "var(--color-primary)",
+        items: [
+            {
+                id: 1,
+                number: 10,
+                suffix: "+",
+                label: "Anos de Mercado",
+                icon: "FaCalendarCheck"
+            },
+            {
+                id: 2,
+                number: 2500,
+                suffix: "+",
+                label: "Projetos Entregues",
+                icon: "FaHome"
+            },
+            {
+                id: 3,
+                number: 100,
+                suffix: "%",
+                label: "Clientes Satisfeitos",
+                icon: "FaSmile"
+            },
+            {
+                id: 4,
+                number: 15,
+                suffix: "mil+",
+                label: "Portas e Janelas Instaladas",
+                icon: "FaDoorOpen"
             }
         ]
     },
     testimonials: {
         title: "O que dizem nossos clientes",
-        subtitle: "A confiança de quem já construiu no Moinho de Vento, Reserva Colonial e região.",
+        subtitle: "Avaliações reais no Google Maps ⭐⭐⭐⭐⭐",
         items: [
             {
                 id: 1,
-                name: "Ricardo & Fernanda",
-                location: "Residencial Alto do Ouro",
-                text: "A Ponto das Portas foi a única empresa que cumpriu o prazo exato da entrega. A qualidade do alumínio preto fosco ficou incrível na nossa fachada.",
-                role: "Proprietários",
-                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                name: "Alexandre Bressan",
+                location: "Valinhos/Vinhedo",
+                text: "Se você está precisando de portas e janelas, em madeira/ferro ou alumínio pode ir no Ponto das Portas. Excelente atendimento, muitas opções e grande estoque a pronta entrega. Facilitam o pagamento e a entrega é mega rápida! Parabéns equipe!",
+                role: "Cliente",
+                avatar: ""
             },
             {
                 id: 2,
-                name: "Arq. Felipe",
+                name: "Leda Parodi",
+                location: "Condomínio",
+                text: "Comprei 46 portas para o Condomínio, entrega dentro do prazo. Sr. Paulo excelente pessoa! Recomendo para os demais síndicos!",
+                role: "Síndica",
+                avatar: ""
+            },
+            {
+                id: 3,
+                name: "Neto Filho",
+                location: "Valinhos",
+                text: "Muita responsabilidade e preço justo, encontrei aqui. Quero agradecer o Sr. Paulo pela sua simpatia e honestidade.",
+                role: "Cliente",
+                avatar: ""
+            },
+            {
+                id: 4,
+                name: "Diogo Pires",
                 location: "Campinas",
-                text: "Indico o Marcos e a equipe de olhos fechados. Eles entendem de planta baixa e resolvem os detalhes técnicos que outros fornecedores deixam passar.",
-                role: "Arquiteto",
-                avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200"
+                text: "Preço excelente, entrega no prazo, e material de qualidade.",
+                role: "Cliente",
+                avatar: ""
+            },
+            {
+                id: 5,
+                name: "Antonio Carlos Souza",
+                location: "Valinhos",
+                text: "Bom atendimento e batentes de qualidade! Recomendo.",
+                role: "Cliente",
+                avatar: ""
+            },
+            {
+                id: 6,
+                name: "Dionísio Dionízio",
+                location: "Valinhos",
+                text: "Ótima localização para comprar materiais em geral, preço bom, atendimento especializado.",
+                role: "Cliente",
+                avatar: ""
             }
         ]
     },

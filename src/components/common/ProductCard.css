@@ -18,12 +18,18 @@
     background: var(--color-white);
     border-radius: var(--border-radius-md);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    /* Subtle frame */
+    box-shadow: none !important;
+    /* Force removal */
+    filter: none !important;
+    /* Ensure no dropshadow filters */
+    /* User requested removal */
+    background: var(--color-white);
+    /* Ensure pure white */
     margin-bottom: var(--spacing-md);
     aspect-ratio: 1 / 1;
-    /* Square for catalog consistency */
-    border: 1px solid var(--color-gray-100);
+    border: none !important;
+    /* Force clean look */
+    /* Clean look */
 }
 
 .product-card__image {

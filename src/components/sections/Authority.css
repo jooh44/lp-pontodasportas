@@ -26,11 +26,35 @@
     border-color: var(--color-accent);
 }
 
-.authority__icon {
-    font-size: 2.5rem;
+.authority__icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-lg);
+    background: rgba(255, 255, 255, 0.05);
+    /* Glass Background */
+    backdrop-filter: blur(8px);
+    /* Strong Blur */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Subtle Border */
     color: var(--color-accent);
-    /* Burnt Yellow Icon */
+    /* Icon Color */
     margin-bottom: var(--spacing-md);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-normal);
+}
+
+.authority__item:hover .authority__icon-box {
+    background: rgba(244, 180, 0, 0.1);
+    border-color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+.authority__icon-box svg {
+    width: 32px;
+    height: 32px;
 }
 
 .authority__title {

@@ -40,10 +40,16 @@
     flex-wrap: wrap;
 }
 
-.hero-split__image-wrapper {
+.hero-split__ticker-wrapper {
     flex: 1;
     position: relative;
     min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, var(--color-gray-50), var(--color-white));
+    /* Subtle highlight behind doors */
+    overflow: hidden;
 }
 
 .hero-split__image {

@@ -1,0 +1,107 @@
+.stats-section {
+    background-color: var(--color-primary);
+    /* Blue Background */
+    color: var(--color-white);
+    padding: var(--spacing-3xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: faint pattern overlay */
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 25%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-2xl);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.stats__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: transform var(--transition-normal);
+}
+
+.stats__card:hover {
+    transform: translateY(-5px);
+}
+
+.stats__icon-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats__icon {
+    font-size: 1.75rem;
+    color: var(--color-accent);
+    /* Yellow accent icon */
+}
+
+.stats__number {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.stats__suffix {
+    font-size: 2rem;
+    /* Slightly smaller than number */
+    color: var(--color-accent);
+}
+
+.stats__label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .stats__grid {
+        gap: var(--spacing-xl);
+        grid-template-columns: repeat(2, 1fr);
+        /* 2x2 grid on mobile */
+    }
+
+    .stats__number {
+        font-size: 2.25rem;
+    }
+
+    .stats__suffix {
+        font-size: 1.5rem;
+    }
+
+    .stats__label {
+        font-size: 0.9rem;
+    }
+}

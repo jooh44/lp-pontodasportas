@@ -19,10 +19,8 @@ export const Header: React.FC = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Início', href: '#hero' },
-        { name: 'Linha L-30', href: '#esquadrias' },
-        { name: 'Madeira', href: '#portas-entrada' },
-        { name: 'Sobre Nós', href: '#sobre' },
+        { name: 'Esquadrias', href: '#produtos' }, // Scrolling to products section general area
+        { name: 'Portas', href: '#produtos' }, // Ideally point to specific parts if grid allowed, but for now products section
     ];
 
     return (
@@ -46,7 +44,7 @@ export const Header: React.FC = () => {
                 <div className="header__actions desktop-only">
                     <Button
                         variant="whatsapp"
-                        size="sm"
+                        size="md" // Increased from sm
                         icon={<FaWhatsapp />}
                         onClick={() => window.open('https://wa.me/5519999999999', '_blank')}
                     >
@@ -59,8 +57,9 @@ export const Header: React.FC = () => {
                     className="header__toggle mobile-only"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label="Menu"
+                    style={{ opacity: isMobileMenuOpen ? 0 : 1 }} // Hide toggle when menu is open to prevent double icon
                 >
-                    {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                    <FaBars />
                 </button>
 
                 {/* Mobile Nav Overlay */}
