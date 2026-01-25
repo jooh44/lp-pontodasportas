@@ -83,7 +83,7 @@ export const ProductShowcase: React.FC = () => {
                                 <Button
                                     variant="whatsapp"
                                     icon={<FaWhatsapp />}
-                                    onClick={() => window.open('https://wa.me/5519999999999', '_blank')}
+                                    onClick={() => window.open('https://wa.me/5519993337602', '_blank')}
                                 >
                                     Solicitar Orçamento
                                 </Button>

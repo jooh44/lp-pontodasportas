@@ -5,7 +5,7 @@ export const content = {
         headline: "Esquadrias de <strong>Alto Padrão</strong> e Portas que Transformam a sua Casa.",
         subheadline: "<strong>10 anos</strong> de excelência em Valinhos e região. Unimos a robustez do alumínio à nobreza da madeira para quem não abre mão de <strong>qualidade e valorização do imóvel.</strong>",
         cta: "Solicitar Orçamento",
-        link: "https://wa.me/5519999999999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." // Placeholder number
+        link: "https://wa.me/5519993337602?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
     },
     authority: {
         title: "Qualidade e Confiança",
@@ -194,7 +194,7 @@ export const content = {
     },
     footer: {
         address: "R. Dom Nery, Valinhos - SP",
-        phone: "(19) 99999-9999",
+        phone: "(19) 99333-7602",
         instagram: "@pontodasportas",
         copyright: "© 2025 Ponto das Portas. Todos os direitos reservados."
     }

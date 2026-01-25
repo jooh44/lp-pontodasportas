@@ -27,7 +27,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ title, description, im
                     size="sm"
                     fullWidth
                     icon={<FaWhatsapp />}
-                    onClick={() => window.open('https://wa.me/5519999999999', '_blank')}
+                    onClick={() => window.open('https://wa.me/5519993337602', '_blank')}
                     className="product-card__btn"
                 >
                     Orçar Agora
