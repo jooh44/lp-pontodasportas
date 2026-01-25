@@ -44,28 +44,28 @@ export const content = {
                 id: "esquadrias",
                 title: "Esquadrias linha L-30",
                 description: "Especialistas na Linha 30 (L-30). Perfis robustos para portas sacada, janelas panorâmicas e projetos de alto padrão.",
-                image: "/products/window-l30-white.png",
+                image: "/products/window-l30-white.webp",
                 tag: "Mais Vendido"
             },
             {
                 id: "portas-entrada",
                 title: "Madeira Maciça Selecionada",
                 description: "Portas Realeza, Venezianas e Pivotantes. Batentes em madeira maciça que garantem estabilidade e sofisticação.",
-                image: "/products/door-solid-white.png",
+                image: "/products/door-solid-white.webp",
                 tag: "Design"
             },
             {
                 id: "janelas-integradas",
                 title: "Janelas com Persiana",
                 description: "Controle total de luminosidade e conforto térmico para quartos e Home Theater.",
-                image: "/products/window-integrated-white.png",
+                image: "/products/window-integrated-white.webp",
                 tag: "Conforto"
             },
             {
                 id: "kits-prontos",
                 title: "Portas Frisadas e Lisas",
                 description: "Semi-sólidas de alta qualidade para interiores. Acabamento perfeito para verniz ou pintura, com batentes sob medida.",
-                image: "/products/door-internal-white.png",
+                image: "/products/door-internal-white.webp",
                 tag: "Praticidade"
             }
         ]
