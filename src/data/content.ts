@@ -113,7 +113,8 @@ export const content = {
                 location: "Valinhos/Vinhedo",
                 text: "Se você está precisando de portas e janelas, em madeira/ferro ou alumínio pode ir no Ponto das Portas. Excelente atendimento, muitas opções e grande estoque a pronta entrega. Facilitam o pagamento e a entrega é mega rápida! Parabéns equipe!",
                 role: "Cliente",
-                avatar: ""
+                avatar: "",
+                date: "Há 3 dias"
             },
             {
                 id: 2,
@@ -121,7 +122,8 @@ export const content = {
                 location: "Condomínio",
                 text: "Comprei 46 portas para o Condomínio, entrega dentro do prazo. Sr. Paulo excelente pessoa! Recomendo para os demais síndicos!",
                 role: "Síndica",
-                avatar: ""
+                avatar: "",
+                date: "Há 1 mês"
             },
             {
                 id: 3,
@@ -129,7 +131,8 @@ export const content = {
                 location: "Valinhos",
                 text: "Muita responsabilidade e preço justo, encontrei aqui. Quero agradecer o Sr. Paulo pela sua simpatia e honestidade.",
                 role: "Cliente",
-                avatar: ""
+                avatar: "",
+                date: "Há 2 semanas"
             },
             {
                 id: 4,
@@ -137,7 +140,8 @@ export const content = {
                 location: "Campinas",
                 text: "Preço excelente, entrega no prazo, e material de qualidade.",
                 role: "Cliente",
-                avatar: ""
+                avatar: "",
+                date: "Há 2 meses"
             },
             {
                 id: 5,
@@ -145,7 +149,8 @@ export const content = {
                 location: "Valinhos",
                 text: "Bom atendimento e batentes de qualidade! Recomendo.",
                 role: "Cliente",
-                avatar: ""
+                avatar: "",
+                date: "Há 5 dias"
             },
             {
                 id: 6,
@@ -153,7 +158,8 @@ export const content = {
                 location: "Valinhos",
                 text: "Ótima localização para comprar materiais em geral, preço bom, atendimento especializado.",
                 role: "Cliente",
-                avatar: ""
+                avatar: "",
+                date: "Há 3 semanas"
             }
         ]
     },
