@@ -30,15 +30,15 @@ export const content = {
             },
             {
                 id: 4,
-                title: "Instalação Especializada",
-                description: "Equipe própria que garante acabamento fino, limpeza e vedação perfeita.",
-                icon: "FaTools"
+                title: "Pronta Entrega",
+                description: "Grande estoque de portas, janelas e acessórios para você levar na hora.",
+                icon: "FaBoxOpen"
             }
         ]
     },
     products: {
         title: "Soluções de Alto Padrão",
-        subtitle: "Do projeto à instalação",
+        subtitle: "Do projeto à entrega",
         items: [
             {
                 id: "esquadrias",
@@ -181,8 +181,8 @@ export const content = {
                 answer: "Nosso prazo médio é de 20 a 45 dias, dependendo da linha escolhida (Cor ou Tipologia). Todos os prazos são firmados em contrato."
             },
             {
-                question: "A instalação está inclusa?",
-                answer: "Sim, oferecemos a opção de fornecimento completo com instalação técnica, para que você tenha garantia total do serviço e do produto."
+                question: "Vocês fazem instalação?",
+                answer: "Não realizamos instalação. Somos especializados na venda de esquadrias e portas de alta qualidade. Podemos indicar profissionais parceiros de confiança se precisar."
             },
             {
                 question: "Vocês trabalham com Madeira ou só Alumínio?",
