@@ -20,8 +20,12 @@ export const Header: React.FC = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Esquadrias', href: '#produtos' }, // Scrolling to products section general area
-        { name: 'Portas', href: '#produtos' }, // Ideally point to specific parts if grid allowed, but for now products section
+        { name: 'Início', href: '#hero' },
+        { name: 'Alumínio', href: '#aluminio' },
+        { name: 'Madeira', href: '#madeira' },
+        { name: 'Ferro', href: '#ferro' },
+        { name: 'Sobre', href: '#sobre' },
+        { name: 'Contato', href: '#contato' },
     ];
 
     return (

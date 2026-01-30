@@ -36,12 +36,12 @@
 .btn--whatsapp {
     background-color: var(--color-secondary);
     color: var(--color-white);
-    box-shadow: var(--shadow-md);
+    /* box-shadow: var(--shadow-md); Removed per request */
 }
 
 .btn--whatsapp:hover {
     background-color: var(--color-secondary-hover);
-    box-shadow: var(--shadow-hover);
+    /* box-shadow: var(--shadow-hover); Removed per request */
     transform: translateY(-2px);
 }
 

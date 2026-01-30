@@ -21,7 +21,7 @@ export const ProductShowcase: React.FC = () => {
 
                 <div className="product-categories-list">
                     {products.categories.map((category) => (
-                        <div key={category.id} className="product-category-group" data-aos="fade-up">
+                        <div id={category.id} key={category.id} className="product-category-group" data-aos="fade-up">
                             <h3 className="category-title">{category.title}</h3>
                             <p className="category-description">{category.description}</p>
 
