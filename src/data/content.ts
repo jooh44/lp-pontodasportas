@@ -2,8 +2,8 @@
 export const content = {
     hero: {
         badges: ["Esquadrias e Portas em Valinhos"],
-        headline: "Esquadrias de <strong>Alto Padrão</strong> e Portas que Transformam a sua Casa.",
-        subheadline: "<strong>10 anos</strong> de excelência em Valinhos e região. Unimos a robustez do alumínio à nobreza da madeira para quem não abre mão de <strong>qualidade e valorização do imóvel.</strong>",
+        headline: "Esquadrias de <strong>Alumínio, Madeira e Ferro</strong> que Transformam sua Casa.",
+        subheadline: "<strong>20 anos</strong> de excelência em Valinhos e região. Unimos a robustez do alumínio à nobreza da madeira para quem não abre mão de <strong>qualidade e valorização do imóvel.</strong>",
         cta: "Solicitar Orçamento",
         link: "https://wa.me/5519993337602?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
     },
@@ -12,8 +12,8 @@ export const content = {
         items: [
             {
                 id: 1,
-                title: "Tradição desde 2014", // Adjusted year math (2024-10) approx
-                description: "Fundada há uma década, somamos experiência e excelência em Valinhos.",
+                title: "Tradição desde 2004",
+                description: "Fundada há duas décadas, somamos experiência e excelência em Valinhos.",
                 icon: "FaHistory" // Icon name reference
             },
             {
@@ -37,36 +37,101 @@ export const content = {
         ]
     },
     products: {
-        title: "Soluções de Alto Padrão",
+        title: "Nossas Soluções",
         subtitle: "Do projeto à entrega",
-        items: [
+        categories: [
             {
-                id: "esquadrias",
-                title: "Esquadrias linha L-30",
-                description: "Especialistas na Linha 30 (L-30). Perfis robustos para portas sacada, janelas panorâmicas e projetos de alto padrão.",
-                image: "/products/window-l30-white.webp",
-                tag: "Mais Vendido"
+                id: "aluminio",
+                title: "Esquadrias de Alumínio",
+                description: "Perfis robustos e tecnologia de ponta para vãos modernos.",
+                items: [
+                    {
+                        id: "esquadrias-l25",
+                        title: "Linha 25 (L-25)",
+                        description: "O equilíbrio perfeito entre custo e benefício. Perfis robustos para projetos residenciais.",
+                        image: "/products/window-l30-white.webp",
+                        imageHover: "/products/window-sliding-open-white.png", // New Hover
+                        tag: "Mais Vendido"
+                    },
+                    {
+                        id: "janelas-integradas",
+                        title: "Janelas Integradas",
+                        description: "Persiana integrada manual ou motorizada. Conforto térmico e acústico superior.",
+                        image: "/products/window-integrated-white.webp",
+                        imageHover: "/products/window-shutter-detail-white.png", // New Hover
+                        tag: "Conforto"
+                    },
+                    {
+                        id: "porta-balcao",
+                        title: "Porta Balcão",
+                        description: "Integração total entre ambientes internos e externos. Ideal para varandas.",
+                        target: "blank",
+                        image: "/products/door-balcony-white-isolated.png",
+                        imageHover: "/products/door-balcony-white-isolated.png",
+                        tag: "Premium"
+                    }
+                ]
             },
             {
-                id: "portas-entrada",
-                title: "Madeira Maciça Selecionada",
-                description: "Portas Realeza, Venezianas e Pivotantes. Batentes em madeira maciça que garantem estabilidade e sofisticação.",
-                image: "/products/door-solid-white.webp",
-                tag: "Design"
+                id: "madeira",
+                title: "Portas de Madeira",
+                description: "A nobreza da madeira maciça com design exclusivo.",
+                items: [
+                    {
+                        id: "portas-entrada",
+                        title: "Madeira Maciça",
+                        description: "Portas pivotantes e realeza. Batentes sólidos para estabilidade total.",
+                        image: "/products/door-solid-wood-v2.png",
+                        imageHover: "/products/door-wood-pivot-angled.png", // New Hover
+                        tag: "Design"
+                    },
+                    {
+                        id: "kits-prontos",
+                        title: "Portas e Batentes",
+                        description: "Kits de portas frisadas ou lisas, prontas para verniz ou pintura.",
+                        image: "/products/door-internal-white.webp",
+                        tag: "Praticidade"
+                    },
+                    {
+                        id: "puxadores",
+                        title: "Puxadores Inox",
+                        description: "Acessórios de alto padrão que valorizam sua porta.",
+                        tag: "Acessório",
+                        image: "/products/handle-stainless-isolated.png",
+                        imageHover: "/products/handle-stainless-isolated.png" // Remove context image
+                    }
+                ]
             },
             {
-                id: "janelas-integradas",
-                title: "Janelas com Persiana",
-                description: "Controle total de luminosidade e conforto térmico para quartos e Home Theater.",
-                image: "/products/window-integrated-white.webp",
-                tag: "Conforto"
-            },
-            {
-                id: "kits-prontos",
-                title: "Portas Frisadas e Lisas",
-                description: "Semi-sólidas de alta qualidade para interiores. Acabamento perfeito para verniz ou pintura, com batentes sob medida.",
-                image: "/products/door-internal-white.webp",
-                tag: "Praticidade"
+                id: "ferro",
+                title: "Esquadrias de Ferro",
+                description: "Estilo Industrial (Serralheria Fina) para projetos contemporâneos.",
+                items: [
+                    {
+                        id: "porta-ferro-estilo",
+                        title: "Porta Estilo Industrial",
+                        description: "Perfis finos de ferro com vidro, trazendo modernidade e amplitude.",
+                        image: "/products/door-iron-industrial-white.png", // New Pure White Isolated
+                        imageHover: "/products/door-iron-industrial-white.png",
+                        tag: "Tendência"
+                    },
+                    {
+                        id: "divisoria-ferro",
+                        title: "Divisórias de Ambiente",
+                        description: "Separe ambientes sem perder a luz natural com nossas divisórias em ferro.",
+                        image: "/products/partition-iron-white.png", // New Pure White Isolated
+                        imageHover: "/products/partition-iron-white.png",
+                        tag: "Novo"
+                    },
+                    {
+                        id: "corrimao-ferro",
+                        title: "Guarda-Corpo",
+                        description: "Segurança com design minimalista para escadas e sacadas.",
+                        tag: "Sob Medida",
+                        image: "/products/railing-iron-black-isolated.png",
+                        imageHover: "/products/railing-iron-black-isolated.png"
+                    }
+                ]
             }
         ]
     },
@@ -75,15 +140,15 @@ export const content = {
         items: [
             {
                 id: 1,
-                number: 10,
+                number: 20,
                 suffix: "+",
                 label: "Anos de Mercado",
                 icon: "FaCalendarCheck"
             },
             {
                 id: 2,
-                number: 2500,
-                suffix: "+",
+                number: 20,
+                suffix: "mil+",
                 label: "Projetos Entregues",
                 icon: "FaHome"
             },
@@ -178,7 +243,7 @@ export const content = {
             },
             {
                 question: "Qual o prazo de entrega?",
-                answer: "Nosso prazo médio é de 20 a 45 dias, dependendo da linha escolhida (Cor ou Tipologia). Todos os prazos são firmados em contrato."
+                answer: "O prazo de entrega é sob consulta, variando conforme a linha escolhida e a especificidade do projeto. Todos os prazos são firmados em contrato."
             },
             {
                 question: "Vocês fazem instalação?",
@@ -186,11 +251,11 @@ export const content = {
             },
             {
                 question: "Vocês trabalham com Madeira ou só Alumínio?",
-                answer: "Ambos. Somos especialistas em Esquadrias de Alumínio (L-30) e também em Portas de Madeira Maciça Selecionada (Realeza, Frisadas), oferecendo a solução completa para sua obra."
+                answer: "Trabalhamos com Alumínio, Madeira e Ferro. Somos especialistas em Esquadrias de Alumínio (L-25) e também em Portas de Madeira Maciça Selecionada (Realeza, Frisadas), oferecendo a solução completa para sua obra."
             },
             {
-                question: "O que é a Linha 30 (L-30)?",
-                answer: "É uma linha de alumínio de alto desempenho, superior às linhas de mercado comuns. Oferece perfis mais robustos, melhor vedação e suporte para vidros mais pesados/panorâmicos."
+                question: "O que é a Linha 25 (L-25)?",
+                answer: "É uma linha de alumínio de alto desempenho, superior às linhas de mercado comuns. Oferece perfis robustos, excelente vedação e suporte para vidros panorâmicos."
             },
             {
                 question: "Alumínio é melhor que madeira?",

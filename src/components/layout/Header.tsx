@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaBars, FaTimes } from 'react-icons/fa';
 import classNames from 'classnames';
 import { Button } from '../common/Button';
+import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 import logo from '../../assets/logo.webp';
 import './Header.css';
 
@@ -46,7 +47,10 @@ export const Header: React.FC = () => {
                         variant="whatsapp"
                         size="md" // Increased from sm
                         icon={<FaWhatsapp />}
-                        onClick={() => window.open('https://wa.me/5519999999999', '_blank')}
+                        onClick={() => {
+                            trackEvent(AnalyticsEvents.WHATSAPP_CLICK, { location: 'header_desktop' });
+                            window.open('https://wa.me/5519999999999', '_blank');
+                        }}
                     >
                         Orçamento
                     </Button>
@@ -88,7 +92,10 @@ export const Header: React.FC = () => {
                                 variant="whatsapp"
                                 fullWidth
                                 icon={<FaWhatsapp />}
-                                onClick={() => window.open('https://wa.me/5519999999999', '_blank')}
+                                onClick={() => {
+                                    trackEvent(AnalyticsEvents.WHATSAPP_CLICK, { location: 'header_mobile_menu' });
+                                    window.open('https://wa.me/5519999999999', '_blank');
+                                }}
                             >
                                 Solicitar Orçamento
                             </Button>

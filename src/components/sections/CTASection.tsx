@@ -2,6 +2,7 @@
 import React from 'react';
 import { content } from '../../data/content';
 import { Button } from '../common/Button';
+import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 import { FaWhatsapp } from 'react-icons/fa';
 import './CTASection.css';
 
@@ -24,7 +25,10 @@ export const CTASection: React.FC = () => {
                         variant="whatsapp"
                         size="lg"
                         icon={<FaWhatsapp />}
-                        onClick={() => window.open('https://wa.me/5519993337602', '_blank')}
+                        onClick={() => {
+                            trackEvent(AnalyticsEvents.WHATSAPP_CLICK, { location: 'cta_section_main' });
+                            window.open('https://wa.me/5519993337602', '_blank');
+                        }}
                         className="btn--cta"
                     >
                         {ctaSection.buttonText}

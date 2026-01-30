@@ -17,14 +17,15 @@
   --color-accent-light: #FFD54F;
 
   /* Colors - Neutral */
-  --color-white: #FFFFFF;
-  --color-gray-50: #F8F9FA;
-  --color-gray-100: #E9ECEF;
-  --color-gray-200: #DEE2E6;
-  --color-gray-500: #ADB5BD;
-  --color-gray-700: #495057;
-  --color-gray-900: #212529;
-  --color-black: #000000;
+  --color-accent: #fbbf24;
+  /* Amber/Gold */
+
+  --color-text: #1f2937;
+  --color-text-light: #4b5563;
+  --color-text-lighter: #9ca3af;
+
+  --color-background: #ffffff;
+  --color-white: #ffffff;
 
   /* Typography */
   --font-family-main: 'Inter', system-ui, -apple-system, sans-serif;

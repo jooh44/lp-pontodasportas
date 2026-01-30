@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { Button } from '../common/Button';
 import { FaWhatsapp } from 'react-icons/fa';
 import { content } from '../../data/content';
+import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 import './HeroSlider.css';
 
 export const Hero: React.FC = () => {
@@ -112,7 +113,10 @@ export const Hero: React.FC = () => {
                             variant="whatsapp"
                             size="lg"
                             icon={<FaWhatsapp />}
-                            onClick={() => window.open(hero.link, '_blank')}
+                            onClick={() => {
+                                trackEvent(AnalyticsEvents.WHATSAPP_CLICK, { location: 'hero_cta' });
+                                window.open(hero.link, '_blank');
+                            }}
                         >
                             {hero.cta}
                         </Button>

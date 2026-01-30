@@ -26,8 +26,8 @@
 }
 
 .header__logo img {
-    height: 54px;
-    /* Increased from 40px */
+    height: 72px;
+    /* Increased per client request - more prominent */
     transition: height var(--transition-normal);
     /* Adjust based on logo aspect ratio */
     width: auto;

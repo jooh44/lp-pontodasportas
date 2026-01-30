@@ -1,131 +1,165 @@
+/* ProductGrid - Minimalist & Premium */
 .product-showcase {
     padding: var(--spacing-3xl) 0;
-    background-color: var(--color-white);
-    /* Pure White */
+    background-color: var(--color-background);
 }
 
-.product-showcase .section-header {
+.product-categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+}
+
+.product-category-group {
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-gray-100);
+}
+
+.product-category-group:last-child {
+    border-bottom: none;
+}
+
+.category-title {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+}
+
+.category-description {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 640px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns for simpler cards? Or stay 3. User said minimalist. 4 columns makes cards smaller/cleaner. Let's try 3 first as safest. Actually, for "minimalist", smaller cards (4col) might look neat if they fit. But let's stick to 3 to avoid layout break. */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Product Card - Minimalist Style */
+.product-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* Clean state: transparent border, no shadow */
+    border: 1px solid transparent;
+    transition: all var(--transition-normal);
+}
+
+.product-card:hover {
+    /* Discreet Yellow Stroke */
+    border-color: var(--color-accent);
+
+    /* Subtle lift */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.product-card__image-wrapper {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background-color: var(--color-white);
+    /* Pure white background */
+    border-radius: var(--border-radius-md);
+    margin: 0;
+
+    /* Internal padding so image doesn't touch edges */
+    padding: var(--spacing-lg);
+
+    border-bottom: 1px solid transparent;
+}
+
+.product-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-card__image {
+    /* transform: scale(1.03); Removed zoom for minimalist feel */
+    transform: none;
+}
+
+/* Minimalist Tag */
+.product-card__tag {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-primary);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    border: 1px solid var(--color-gray-200);
+}
+
+.product-card__content {
+    padding: var(--spacing-md);
+    /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-card__title {
+    font-size: 1.1rem;
+    /* Slightly smaller title */
+    color: var(--color-primary);
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.product-card__description {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+    line-height: 1.4;
+}
+
+/* Section Header */
+.section-header {
     text-align: center;
     margin-bottom: var(--spacing-3xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.product-showcase .section-title {
-    font-size: 2.5rem;
-    /* Slightly larger title */
+.section-title {
+    font-size: 2.25rem;
     color: var(--color-primary);
     margin-bottom: var(--spacing-sm);
 }
 
-.product-showcase .section-subtitle {
-    font-size: 1.5rem;
-    /* Increased from default (usually 1 or 1.125rem) */
-    color: var(--color-gray-700);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.product-section {
-    padding: var(--spacing-3xl) 0;
-    background-color: var(--color-white);
-    overflow: hidden;
-}
-
-.product-section:nth-child(even) {
-    background-color: var(--color-white);
-    /* Remove alternating stripe */
-}
-
-.product-section__container {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-3xl);
-}
-
-.product-section--reverse .product-section__container {
-    flex-direction: row-reverse;
-}
-
-.product-section__image-wrapper {
-    flex: 1;
-    position: relative;
-    min-height: 600px;
-    /* Increased from 400px */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.product-section__image {
-    max-width: 100%;
-    max-height: 650px;
-    /* Increased from 400px */
-    object-fit: contain;
-    transition: transform var(--transition-normal);
-    filter: none !important;
-    /* Removed drop-shadow */
-}
-
-.product-section:hover .product-section__image {
-    transform: scale(1.05);
-}
-
-.product-section__tag {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--color-accent);
-    color: var(--color-primary-dark);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius-sm);
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    z-index: 2;
-    box-shadow: var(--shadow-sm);
-}
-
-.product-section__content {
-    flex: 1;
-}
-
-.product-section__title {
-    font-size: 2.25rem;
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-md);
-    line-height: 1.2;
-}
-
-.product-section__description {
+.section-subtitle {
     font-size: 1.125rem;
-    color: var(--color-gray-700);
-    margin-bottom: var(--spacing-xl);
-    line-height: 1.6;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .product-section__container,
-    .product-section--reverse .product-section__container {
-        flex-direction: column;
-        gap: var(--spacing-lg);
-        text-align: center;
-    }
-
-    .product-section__image-wrapper {
-        min-height: auto;
-        width: 100%;
-    }
-
-    .product-section__image {
-        max-height: 400px;
-    }
-
-    .product-section__title {
-        font-size: 1.75rem;
-    }
-
-    .product-section {
-        padding: var(--spacing-xl) 0;
-    }
+    color: var(--color-text-light);
 }
