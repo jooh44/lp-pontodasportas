@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import Lenis from 'lenis';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Header } from './components/layout/Header';
@@ -10,44 +10,19 @@ import { ProductShowcase } from './components/sections/ProductShowcase';
 import { StatsSection } from './components/sections/StatsSection';
 import { FAQ } from './components/sections/FAQ';
 import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
+import { BackToTop } from './components/common/BackToTop';
 import { Footer } from './components/layout/Footer';
 import { Testimonials } from './components/sections/Testimonials';
 import { CTASection } from './components/sections/CTASection';
+import { MapSection } from './components/sections/MapSection';
 
 // Register standard ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
+    // Smooth scroll removed as per request
 
-    // Synchronize Lenis with GSAP ScrollTrigger
-    lenis.on('scroll', ScrollTrigger.update);
-
-    // Add Lenis's requestAnimationFrame to GSAP's ticker
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    // Disable GSAP's default lag smoothing to prevent conflicts
-    gsap.ticker.lagSmoothing(0);
-
-    return () => {
-      // Cleanup
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000);
-      });
-      lenis.destroy();
-    };
   }, []);
 
   return (
@@ -61,9 +36,11 @@ function App() {
         <Testimonials />
         <CTASection />
         <FAQ />
+        <MapSection />
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <BackToTop />
     </>
   )
 }

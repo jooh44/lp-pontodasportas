@@ -1,55 +1,44 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 import { content } from '../../data/content';
-import { Button } from '../common/Button';
-import { FaWhatsapp } from 'react-icons/fa';
+import { ProductCard } from '../common/ProductCard';
+import { FaDoorOpen } from 'react-icons/fa';
 import './ProductShowcase.css';
 
 export const ProductShowcase: React.FC = () => {
     const { products } = content;
-    const containerRef = useRef<HTMLElement>(null);
 
     return (
-        <section id="produtos" className="product-showcase" ref={containerRef}>
+        <section id="produtos" className="product-showcase">
             <div className="container">
-                <div /* data-aos="fade-up" */>
-                    <div className="section-header">
-                        <h2 className="section-title">{products.title}</h2>
-                        <p className="section-subtitle">{products.subtitle}</p>
-                    </div>
+                <div className="section-header">
+                    <h2 className="section-title">
+                        <FaDoorOpen className="section-title-icon" />
+                        {products.title}
+                    </h2>
+                    <p className="section-subtitle">{products.subtitle}</p>
                 </div>
 
                 <div className="product-categories-list">
                     {products.categories.map((category) => (
-                        <div id={category.id} key={category.id} className="product-category-group" data-aos="fade-up">
+                        <div id={category.id} key={category.id} className="product-category-group">
                             <h3 className="category-title">{category.title}</h3>
                             <p className="category-description">{category.description}</p>
 
                             <div className="products-grid">
                                 {category.items.map((item) => (
-                                    <article key={item.id} className="product-card group">
-                                        <div className="product-card__image-wrapper">
-                                            <img
-                                                src={item.image}
-                                                alt={item.title}
-                                                className="product-card__image"
-                                                loading="lazy"
-                                            />
-                                            {item.tag && <span className="product-card__tag">{item.tag}</span>}
-                                        </div>
-                                        <div className="product-card__content">
-                                            <h4 className="product-card__title">{item.title}</h4>
-                                            <p className="product-card__description">{item.description}</p>
-                                            <Button
-                                                variant="whatsapp"
-                                                fullWidth
-                                                icon={<FaWhatsapp />}
-                                                onClick={() => window.open('https://wa.me/5519993337602', '_blank')}
-                                            >
-                                                Orçamento
-                                            </Button>
-                                        </div>
-                                    </article>
+                                    <div key={item.id} className="product-item-wrapper">
+                                        <ProductCard
+                                            title={item.title}
+                                            description={item.description}
+                                            image={item.image}
+                                            onClick={() => {
+                                                const message = `Olá, gostaria de um orçamento da ${item.title}.`;
+                                                const encodedMessage = encodeURIComponent(message);
+                                                window.open(`https://wa.me/5519993337602?text=${encodedMessage}`, '_blank');
+                                            }}
+                                        />
+                                    </div>
                                 ))}
                             </div>
                         </div>

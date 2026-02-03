@@ -14,7 +14,7 @@ export const content = {
                 id: 1,
                 title: "Tradição desde 2004",
                 description: "Fundada há duas décadas, somamos experiência e excelência em Valinhos.",
-                icon: "FaHistory" // Icon name reference
+                icon: "FaHistory"
             },
             {
                 id: 2,
@@ -38,99 +38,116 @@ export const content = {
     },
     products: {
         title: "Nossas Soluções",
-        subtitle: "Do projeto à entrega",
+        subtitle: "Catálogo Completo",
         categories: [
             {
-                id: "aluminio",
-                title: "Esquadrias de Alumínio",
-                description: "Perfis robustos e tecnologia de ponta para vãos modernos.",
-                items: [
-                    {
-                        id: "esquadrias-l25",
-                        title: "Linha 25 (L-25)",
-                        description: "O equilíbrio perfeito entre custo e benefício. Perfis robustos para projetos residenciais.",
-                        image: "/products/window-l30-white.webp",
-                        imageHover: "/products/window-sliding-open-white.png", // New Hover
-                        tag: "Mais Vendido"
-                    },
-                    {
-                        id: "janelas-integradas",
-                        title: "Janelas Integradas",
-                        description: "Persiana integrada manual ou motorizada. Conforto térmico e acústico superior.",
-                        image: "/products/window-integrated-white.webp",
-                        imageHover: "/products/window-shutter-detail-white.png", // New Hover
-                        tag: "Conforto"
-                    },
-                    {
-                        id: "porta-balcao",
-                        title: "Porta Balcão",
-                        description: "Integração total entre ambientes internos e externos. Ideal para varandas.",
-                        target: "blank",
-                        image: "/products/door-balcony-white-isolated.png",
-                        imageHover: "/products/door-balcony-white-isolated.png",
-                        tag: "Premium"
-                    }
-                ]
-            },
-            {
-                id: "madeira",
+                id: "portas-madeira",
                 title: "Portas de Madeira",
                 description: "A nobreza da madeira maciça com design exclusivo.",
                 items: [
-                    {
-                        id: "portas-entrada",
-                        title: "Madeira Maciça",
-                        description: "Portas pivotantes e realeza. Batentes sólidos para estabilidade total.",
-                        image: "/products/door-solid-wood-v2.png",
-                        imageHover: "/products/door-wood-pivot-angled.png", // New Hover
-                        tag: "Design"
-                    },
-                    {
-                        id: "kits-prontos",
-                        title: "Portas e Batentes",
-                        description: "Kits de portas frisadas ou lisas, prontas para verniz ou pintura.",
-                        image: "/products/door-internal-white.webp",
-                        tag: "Praticidade"
-                    },
-                    {
-                        id: "puxadores",
-                        title: "Puxadores Inox",
-                        description: "Acessórios de alto padrão que valorizam sua porta.",
-                        tag: "Acessório",
-                        image: "/products/handle-stainless-isolated.png",
-                        imageHover: "/products/handle-stainless-isolated.png" // Remove context image
-                    }
+                    { id: "pm-01", title: "Folha de Porta", description: "Qualidade e acabamento superior.", image: "/products-new/PORTAS_DE_MADEIRA_folha de porta.png" },
+                    { id: "pm-02", title: "Porta de Correr", description: "Praticidade e economia de espaço.", image: "/products-new/PORTAS_DE_MADEIRA_porta de correr.png" },
+                    { id: "pm-03", title: "Porta Duas Almofadas", description: "Design clássico almofadado.", image: "/products-new/PORTAS_DE_MADEIRA_porta duas almofadas.png" },
+                    { id: "pm-04", title: "Portas Econômicas", description: "Custo-benefício sem perder qualidade.", image: "/products-new/PORTAS_DE_MADEIRA_portas economicas.png" },
+                    { id: "pm-05", title: "Portas Frisadas", description: "Visual moderno e clean.", image: "/products-new/PORTAS_DE_MADEIRA_portas frisadas.png" },
+                    { id: "pm-06", title: "Portas Realeza", description: "Sofisticação para sua entrada.", image: "/products-new/PORTAS_DE_MADEIRA_portas realeza.png" }
                 ]
             },
             {
-                id: "ferro",
-                title: "Esquadrias de Ferro",
-                description: "Estilo Industrial (Serralheria Fina) para projetos contemporâneos.",
+                id: "portas-aluminio",
+                title: "Portas de Alumínio",
+                description: "Perfis robustos e tecnologia de ponta.",
                 items: [
-                    {
-                        id: "porta-ferro-estilo",
-                        title: "Porta Estilo Industrial",
-                        description: "Perfis finos de ferro com vidro, trazendo modernidade e amplitude.",
-                        image: "/products/door-iron-industrial-white.png", // New Pure White Isolated
-                        imageHover: "/products/door-iron-industrial-white.png",
-                        tag: "Tendência"
-                    },
-                    {
-                        id: "divisoria-ferro",
-                        title: "Divisórias de Ambiente",
-                        description: "Separe ambientes sem perder a luz natural com nossas divisórias em ferro.",
-                        image: "/products/partition-iron-white.png", // New Pure White Isolated
-                        imageHover: "/products/partition-iron-white.png",
-                        tag: "Novo"
-                    },
-                    {
-                        id: "corrimao-ferro",
-                        title: "Guarda-Corpo",
-                        description: "Segurança com design minimalista para escadas e sacadas.",
-                        tag: "Sob Medida",
-                        image: "/products/railing-iron-black-isolated.png",
-                        imageHover: "/products/railing-iron-black-isolated.png"
-                    }
+                    { id: "pa-01", title: "Porta Sacada 2 Folhas", description: "Luminosidade e amplitude.", image: "/products-new/PORTAS_DE_ALUMINIO_Porta Sacada de Correr 2 Folhas.png" },
+                    { id: "pa-02", title: "Porta Lambril Basculante", description: "Ventilação e privacidade.", image: "/products-new/PORTAS_DE_ALUMINIO_porta lambril-basculante.png" },
+                    { id: "pa-03", title: "Porta Pivotante L-30", description: "Imponente e moderna.", image: "/products-new/PORTAS_DE_ALUMINIO_porta pivotante-L-30.png" },
+                    { id: "pa-04", title: "Porta Social", description: "Ideal para entradas principais.", image: "/products-new/PORTAS_DE_ALUMINIO_porta social.png" },
+                    { id: "pa-05", title: "Porta Balcão", description: "Integração ideal para varandas.", image: "/products-new/PORTAS_DE_ALUMINIO_porta-balcao.png" },
+                    { id: "pa-06", title: "Porta Basculante", description: "Funcionalidade para cozinhas.", image: "/products-new/PORTAS_DE_ALUMINIO_porta-basculante.png" },
+                    { id: "pa-07", title: "Porta Camarão", description: "Abertura articulada inteligente.", image: "/products-new/PORTAS_DE_ALUMINIO_porta-camarão.png" },
+                    { id: "pa-08", title: "Porta de Correr 2 Folhas", description: "Versatilidade para ambientes.", image: "/products-new/PORTAS_DE_ALUMINIO_porta-de-correr-2-folhas.png" },
+                    { id: "pa-09", title: "Porta de Correr", description: "Deslize suave e silencioso.", image: "/products-new/PORTAS_DE_ALUMINIO_porta-de-correr.png" },
+                    { id: "pa-10", title: "Porta Lambril Social", description: "Elegância com frisos.", image: "/products-new/PORTAS_DE_ALUMINIO_porta-de-lanbril-social.png" },
+                    { id: "pa-11", title: "Porta Sacada 3 Folhas", description: "Máxima abertura do vão.", image: "/products-new/PORTAS_DE_ALUMINIO_porta-sacada-de-correr-3-folhas.png" },
+                    { id: "pa-12", title: "Portas Integradas", description: "Persiana integrada de enrolar.", image: "/products-new/PORTAS_DE_ALUMINIO_portas integradas.png" }
+                ]
+            },
+            {
+                id: "portas-ferro",
+                title: "Portas de Ferro",
+                description: "Segurança e durabilidade com estilo industrial.",
+                items: [
+                    { id: "pf-01", title: "Porta Social/Basculante", description: "Resistência para sua casa.", image: "/products-new/PORTAS_DE_FERRO_Porta Social ou Basculante.png" },
+                    { id: "pf-02", title: "Portas de Correr", description: "Grade de proteção reforçada.", image: "/products-new/PORTAS_DE_FERRO_Portas de correr.png" }
+                ]
+            },
+            {
+                id: "janelas-madeira",
+                title: "Janelas de Madeira",
+                description: "Charme e conforto térmico para seu ambiente.",
+                items: [
+                    { id: "jm-01", title: "Janela de Abrir", description: "Clássica e ventilada.", image: "/products-new/JANELAS_DE_MADEIRA_janela de abrir.png" },
+                    { id: "jm-02", title: "Maximo-Ar 3 Seções", description: "Controle ideal do fluxo de ar.", image: "/products-new/JANELAS_DE_MADEIRA_maximo ar 3 seções.png" },
+                    { id: "jm-03", title: "Maximo-Ar", description: "Praticidade para banheiros.", image: "/products-new/JANELAS_DE_MADEIRA_maximo ar.png" },
+                    { id: "jm-04", title: "Veneziana", description: "Controle de luz natural.", image: "/products-new/JANELAS_DE_MADEIRA_veneziana.png" },
+                    { id: "jm-05", title: "Vitro de Correr", description: "Visibilidade e iluminação.", image: "/products-new/JANELAS_DE_MADEIRA_vitro de correr.png" }
+                ]
+            },
+            {
+                id: "janelas-aluminio",
+                title: "Janelas de Alumínio",
+                description: "Praticidade e zero manutenção.",
+                items: [
+                    { id: "ja-01", title: "Maximo-Ar Madero", description: "Acabamento amadeirado.", image: "/products-new/JANELAS_DE_ALUMINIO_Maximo-Ar Alumínio Madero.png" },
+                    { id: "ja-02", title: "Veneziana Integrada", description: "Blackout total sob medida.", image: "/products-new/JANELAS_DE_ALUMINIO_Veneziana Integrada Manual.png" },
+                    { id: "ja-03", title: "Veneziana Madero", description: "Estilo madeira, dura como alumínio.", image: "/products-new/JANELAS_DE_ALUMINIO_Veneziana Madero.png" },
+                    { id: "ja-04", title: "Vitro Basculante 2 Seções", description: "Ventilação superior.", image: "/products-new/JANELAS_DE_ALUMINIO_Vitro Basculante de 2 Seções.png" },
+                    { id: "ja-05", title: "Janela de Correr c/ Grade", description: "Segurança extra.", image: "/products-new/JANELAS_DE_ALUMINIO_janela de correr com grade.png" },
+                    { id: "ja-06", title: "Linha Econômica", description: "Solução acessível.", image: "/products-new/JANELAS_DE_ALUMINIO_linha economica completa.png" },
+                    { id: "ja-07", title: "Maximo Ar 2 Seções", description: "Versátil para áreas de serviço.", image: "/products-new/JANELAS_DE_ALUMINIO_maximo ar 2 seções.png" },
+                    { id: "ja-08", title: "Maximo Ar c/ Grade", description: "Proteção e ventilação.", image: "/products-new/JANELAS_DE_ALUMINIO_maximo ar com grade.png" },
+                    { id: "ja-09", title: "Maximo Ar", description: "Compacto e funcional.", image: "/products-new/JANELAS_DE_ALUMINIO_maximo ar.png" },
+                    { id: "ja-10", title: "Veneziana L-25", description: "Padrão de mercado reforçado.", image: "/products-new/JANELAS_DE_ALUMINIO_veneziana L-25.png" },
+                    { id: "ja-11", title: "Veneziana Brilhante", description: "Acabamento polido.", image: "/products-new/JANELAS_DE_ALUMINIO_veneziana brilhante.png" },
+                    { id: "ja-12", title: "Veneziana", description: "Tradicional e eficiente.", image: "/products-new/JANELAS_DE_ALUMINIO_veneziana.png" },
+                    { id: "ja-13", title: "Vitro Basculante L-25", description: "Qualidade L-25.", image: "/products-new/JANELAS_DE_ALUMINIO_vitro basculante-L-25.png" },
+                    { id: "ja-14", title: "Vitro Econômico", description: "Para orçamentos justos.", image: "/products-new/JANELAS_DE_ALUMINIO_vitro economico.png" },
+                    { id: "ja-15", title: "Vitrô Madero", description: "Beleza da madeira no alumínio.", image: "/products-new/JANELAS_DE_ALUMINIO_vitrô madeiro.png" }
+                ]
+            },
+            {
+                id: "janelas-ferro",
+                title: "Janelas de Ferro",
+                description: "Resistência tradicional.",
+                items: [
+                    { id: "jf-01", title: "Maximo Ar", description: "Robusto e seguro.", image: "/products-new/JANELAS_DE_FERRO_maximo ar.png" },
+                    { id: "jf-02", title: "Veneziana", description: "Segurança máxima.", image: "/products-new/JANELAS_DE_FERRO_veneziana.png" },
+                    { id: "jf-03", title: "Vitro de Correr", description: "Grade integrada.", image: "/products-new/JANELAS_DE_FERRO_vitro de correr.png" }
+                ]
+            },
+            {
+                id: "batentes",
+                title: "Batentes e Afins",
+                description: "Acabamentos essenciais para instalação.",
+                items: [
+                    { id: "bt-01", title: "Bancos de Madeira", description: "Rústicos e duráveis.", image: "/products-new/BATENTES_E_AFINS_bancos de madeira.png" },
+                    { id: "bt-02", title: "Batentes", description: "Madeira de lei.", image: "/products-new/BATENTES_E_AFINS_batentes.png" },
+                    { id: "bt-03", title: "Espuma Expansiva", description: "Instalação e vedação.", image: "/products-new/BATENTES_E_AFINS_espuma expansiva.png" },
+                    { id: "bt-04", title: "Guarnições", description: "Molduras para acabamento.", image: "/products-new/BATENTES_E_AFINS_guarnições.png" },
+                    { id: "bt-05", title: "Limitadores", description: "Proteção para portas.", image: "/products-new/BATENTES_E_AFINS_limitadores.png" }
+                ]
+            },
+            {
+                id: "fechaduras",
+                title: "Fechaduras e Ferragens",
+                description: "Segurança e acessórios.",
+                items: [
+                    { id: "fe-01", title: "Dobradiças Pivô", description: "Para portas pivotantes.", image: "/products-new/FECHADURAS_E_DOBRADIÇAS_dobradiças pivô.png" },
+                    { id: "fe-02", title: "Dobradiças", description: "Aço reforçado.", image: "/products-new/FECHADURAS_E_DOBRADIÇAS_dobradiças.png" },
+                    { id: "fe-03", title: "Fechadura Blim-Blim", description: "Auxiliar de segurança.", image: "/products-new/FECHADURAS_E_DOBRADIÇAS_fechadura blim-blim.png" },
+                    { id: "fe-04", title: "Fechaduras c/ Maçaneta", description: "Kits completos.", image: "/products-new/FECHADURAS_E_DOBRADIÇAS_fechaduras com maçaneta.png" },
+                    { id: "fe-05", title: "Fechaduras", description: "Modelos variados.", image: "/products-new/FECHADURAS_E_DOBRADIÇAS_fechaduras.png" },
+                    { id: "fe-06", title: "Puxadores", description: "Design moderno em inox.", image: "/products-new/FERRAGENS_puxadores.png" }
                 ]
             }
         ]
@@ -232,7 +249,7 @@ export const content = {
         title: "Sua obra não pode parar.",
         subtitle: "Garanta esquadrias de qualidade com quem entende de obra. Agenda de medições da semana preenchendo rapidamente.",
         buttonText: "Falar com Consultor Agora",
-        backgroundImage: "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80&w=1920" // Construction bg
+        backgroundImage: "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80&w=1920"
     },
     faq: {
         title: "Perguntas Frequentes",

@@ -1,0 +1,12 @@
+.map-section {
+    width: 100%;
+    height: 450px;
+    margin-bottom: -6px;
+    /* Remove small gap sometimes caused by iframe display inline */
+}
+
+.map-section iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

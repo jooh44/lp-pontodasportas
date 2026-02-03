@@ -1,165 +1,118 @@
-/* ProductGrid - Minimalist & Premium */
 .product-showcase {
-    padding: var(--spacing-3xl) 0;
-    background-color: var(--color-background);
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+    /* Light background */
+    color: #333;
+    /* Dark text */
+}
+
+.product-showcase .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.product-showcase .section-title {
+    color: var(--color-primary, #0B2545);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.section-title-icon {
+    color: var(--color-accent, #E1E835);
+    font-size: 1.8rem;
+}
+
+.product-showcase .section-subtitle {
+    color: #666;
 }
 
 .product-categories-list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-3xl);
+    gap: 4rem;
 }
 
 .product-category-group {
-    padding-bottom: var(--spacing-xl);
-    border-bottom: 1px solid var(--color-gray-100);
-}
-
-.product-category-group:last-child {
-    border-bottom: none;
+    margin-bottom: 2rem;
 }
 
 .category-title {
-    font-size: 1.75rem;
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-xs);
-    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-primary, #0B2545);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-primary);
+    border-bottom: 2px solid var(--color-accent, #E1E835);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 .category-description {
-    font-size: 1rem;
-    color: var(--color-text-light);
-    margin-bottom: var(--spacing-lg);
+    color: #666;
+    margin-bottom: 2rem;
     max-width: 600px;
+    font-size: 1.1rem;
 }
+
 
 .products-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: var(--spacing-lg);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+
+    /* Mobile Full Width Scroll Fix */
+    margin: 0 -1rem;
+    /* Pull out to screen edges (assuming container padding is 1rem) */
+    padding: 0 1rem 2rem 1rem;
+    /* Push content back in + bottom space for shadow */
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-@media (min-width: 640px) {
+.products-grid::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.product-item-wrapper {
+    flex: 0 0 85%;
+    /* Mobile: Show 85% of card to encourage scroll */
+    scroll-snap-align: start;
+    height: auto;
+}
+
+@media (min-width: 768px) {
     .products-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding-bottom: 0;
+        margin: 0;
+        /* Reset mobile negative margins */
+        padding: 0;
+        /* Reset mobile padding */
+        overflow-x: visible;
+    }
+
+    .product-item-wrapper {
+        flex: none;
+        width: auto;
     }
 }
 
 @media (min-width: 1024px) {
     .products-grid {
-        grid-template-columns: repeat(4, 1fr);
-        /* 4 columns for simpler cards? Or stay 3. User said minimalist. 4 columns makes cards smaller/cleaner. Let's try 3 first as safest. Actually, for "minimalist", smaller cards (4col) might look neat if they fit. But let's stick to 3 to avoid layout break. */
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Product Card - Minimalist Style */
-.product-card {
-    background: var(--color-white);
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    /* Clean state: transparent border, no shadow */
-    border: 1px solid transparent;
-    transition: all var(--transition-normal);
-}
-
-.product-card:hover {
-    /* Discreet Yellow Stroke */
-    border-color: var(--color-accent);
-
-    /* Subtle lift */
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
-}
-
-.product-card__image-wrapper {
-    position: relative;
-    aspect-ratio: 4/5;
-    overflow: hidden;
-    background-color: var(--color-white);
-    /* Pure white background */
-    border-radius: var(--border-radius-md);
-    margin: 0;
-
-    /* Internal padding so image doesn't touch edges */
-    padding: var(--spacing-lg);
-
-    border-bottom: 1px solid transparent;
-}
-
-.product-card__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.product-card:hover .product-card__image {
-    /* transform: scale(1.03); Removed zoom for minimalist feel */
-    transform: none;
-}
-
-/* Minimalist Tag */
-.product-card__tag {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--color-primary);
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    z-index: 2;
-    border: 1px solid var(--color-gray-200);
-}
-
-.product-card__content {
-    padding: var(--spacing-md);
-    /* Reduced padding */
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.product-card__title {
-    font-size: 1.1rem;
-    /* Slightly smaller title */
-    color: var(--color-primary);
-    margin-bottom: 4px;
-    font-weight: 600;
-}
-
-.product-card__description {
-    font-size: 0.875rem;
-    color: var(--color-text-light);
-    margin-bottom: var(--spacing-md);
-    flex-grow: 1;
-    line-height: 1.4;
-}
-
-/* Section Header */
-.section-header {
-    text-align: center;
-    margin-bottom: var(--spacing-3xl);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section-title {
-    font-size: 2.25rem;
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-sm);
-}
-
-.section-subtitle {
-    font-size: 1.125rem;
-    color: var(--color-text-light);
+@media (min-width: 1280px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

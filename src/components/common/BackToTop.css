@@ -1,0 +1,49 @@
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    /* Positioned above WhatsApp button (24px + 60px height + gap) */
+    right: 32px;
+    /* Centered relative to WhatsApp (60px width vs ~45px width) */
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-primary, #0B2545);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    /* Below WhatsApp (1000) if overlap, but shouldn't overlap */
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 1.2rem;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--color-accent, #E1E835);
+    color: var(--color-primary, #0B2545);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 80px;
+        /* Mobile WhatsApp is at 16px + 50px height + gap */
+        right: 21px;
+        /* Center relative to WhatsApp 50px */
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
