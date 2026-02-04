@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
     const { footer } = content;
 
     return (
-        <footer id="contato" className="footer">
+        <footer id="footer" className="footer">
             <div className="container footer__container">
                 {/* Brand Column */}
                 <div className="footer__col footer__brand">

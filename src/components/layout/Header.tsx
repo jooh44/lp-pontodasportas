@@ -21,11 +21,12 @@ export const Header: React.FC = () => {
 
     const navLinks = [
         { name: 'Início', href: '#hero' },
-        { name: 'Alumínio', href: '#aluminio' },
-        { name: 'Madeira', href: '#madeira' },
-        { name: 'Ferro', href: '#ferro' },
-        { name: 'Sobre', href: '#sobre' },
-        { name: 'Contato', href: '#contato' },
+        { name: 'Madeira', href: '#portas-madeira' },
+        { name: 'Alumínio', href: '#portas-aluminio' },
+        { name: 'Ferro', href: '#portas-ferro' },
+        { name: 'Janelas', href: '#janelas-madeira' },
+        { name: 'Acessórios', href: '#batentes' },
+        { name: 'Contato', href: '#footer' },
     ];
 
     return (

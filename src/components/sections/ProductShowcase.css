@@ -37,6 +37,8 @@
 
 .product-category-group {
     margin-bottom: 2rem;
+    scroll-margin-top: 120px;
+    /* Ensure title is visible below fixed header */
 }
 
 .category-title {
