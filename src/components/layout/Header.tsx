@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
                         icon={<FaWhatsapp />}
                         onClick={() => {
                             trackEvent(AnalyticsEvents.WHATSAPP_CLICK, { location: 'header_desktop' });
-                            window.open('https://wa.me/5519999999999', '_blank');
+                            window.open('https://wa.me/5519993337602', '_blank');
                         }}
                     >
                         Orçamento
@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
                                 icon={<FaWhatsapp />}
                                 onClick={() => {
                                     trackEvent(AnalyticsEvents.WHATSAPP_CLICK, { location: 'header_mobile_menu' });
-                                    window.open('https://wa.me/5519999999999', '_blank');
+                                    window.open('https://wa.me/5519993337602', '_blank');
                                 }}
                             >
                                 Solicitar Orçamento

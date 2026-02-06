@@ -281,7 +281,7 @@ export const content = {
         ]
     },
     footer: {
-        address: "R. Dom Nery, Valinhos - SP",
+        address: "Av. Dom Nery, 781, Valinhos - SP",
         phone: "(19) 99333-7602",
         instagram: "@pontodasportasvalinhos",
         copyright: "© 2026 Ponto das Portas. Todos os direitos reservados."
